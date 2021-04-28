@@ -37,23 +37,14 @@ def the_sum(num_1,num_2):
 	l2 = len(num_2)
 	sum_lst=[]  #empty list that will take the sums
 	carry =0  #carry for the sum of the two numbers
-	if l1>=l2:  #checking the length of the two nums given 
+	if l1=l2:  #checking the length of the two nums given 
 		for i in range(0,l2): #range of the smaller number
 			
 			add_num = num_2[l2-i-1] + num_1[l1-i-1] + int(carry) #two number are added and carry is also added
-		
 			add_num = str(add_num)
-			#print(add_num)
-
-
 			if len(add_num)>1:       #check for the carry part
 				carry = add_num[0]      #carry is initilaized
-				#print(carry)
-				#print(add_num[1])
 				sum_lst.append(add_num[1])   #first number appened 
-				#print(sum_lst)
-
-
 			else:
 
 				sum_lst.append(add_num)  #if carry is zero or less than two digit append the number 
@@ -61,15 +52,32 @@ def the_sum(num_1,num_2):
 
 
 
-	#else:
-		#for i in range(len(l1)):
-			#do something
+	elif l1>l2:
+		for i in range(len(l2)):
+			add_num = num_2[l2-i-1] + num_1[l1-i-1] + int(carry) #two number are added and carry is also added
+			add_num = str(add_num)
 
 
-	sum_lst.append(carry)
+
+		
+
+
+
 	sum_lst.reverse()
 
 
-	return 	sum_lst
+	if carry == 0:
+		return 	sum_lst
+	else: 
+
+
+		return sum_lst.append(carry)
+	
+
+
+	
+
+
+	
 
 print(the_sum(num_1,num_2))
