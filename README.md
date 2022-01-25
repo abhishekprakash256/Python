@@ -1,8 +1,8 @@
 ## Python Programing Practice 
 
-### Include flies of 
+### Included flies for following : 
 
 - Algorithms
 - Leetcode questions
-- Data-structure
-- OPPS  concept
+- Data-structures
+- OPPS concept
