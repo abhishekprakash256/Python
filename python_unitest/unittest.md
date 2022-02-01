@@ -28,6 +28,10 @@
 
 - The raise error function 
 
+- Test should be isolated means one test doesn't depend on the other 
+
+- Test driven approach, write test before code
+
   - syntax 
 
     ```python
@@ -45,6 +49,19 @@
 
   - It can be used for the setting the database the setup method
   - the tearDown can be used to erase the data 
+
+- Testing by mocking
+
+  - To test the request from the website and get the response in the case website is down
+
+    ```python
+    def monthly_schedule(self, month):
+        response = requests.get(f'http://company.com/{self.last}/{month}')
+        if response.ok:
+            return response.ok
+       	else:
+            return "bad response"
+    ```
 
 ### Links 
 
