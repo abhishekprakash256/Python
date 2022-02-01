@@ -3,6 +3,6 @@
 ### Included flies for following : 
 
 - Algorithms
-- Leetcode questions
+- Coding questions
 - Data-structures
 - OPPS concept
