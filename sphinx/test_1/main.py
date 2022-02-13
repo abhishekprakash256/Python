@@ -8,6 +8,24 @@ import pymongo
 import os
 
 
+def add(a:int, b:int)->int:
+	"""
+	The function returns the value of two integers
+
+	Arguments:
+		a: (int) the value of integer
+		b: (int) the value of integer
+
+	Returns:
+
+		sum (int) the sum of two numbers
+
+	"""
+	sum = a+b
+	
+	return sum
+
+'''
 class Person:
 	"""
 	The class to hold the data of the person
@@ -41,10 +59,12 @@ class Person:
 		The method assigns a new id to the person
 		Attributes: new_id (int)
 		"""
-		self.unque_id = new_id
+		self.unque_id = new_id'''
 
 
 if __name__ == "__main__":
+
+	print(add(3,3))
 	
-	abhi = Person("Abhi", 25, 1)
-	abhi.change_name("Abhishek")
+	"""abhi = Person("Abhi", 25, 1)
+	abhi.change_name("Abhishek")"""
