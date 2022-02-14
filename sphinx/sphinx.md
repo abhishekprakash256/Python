@@ -62,8 +62,6 @@ module #sometime doesn't work
   pip install furo
   ```
 
-  
-
 ### Notes
 
 - Fixes the "autodoc error"
@@ -73,7 +71,7 @@ extensions = ['sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
 sphinx.ext.napolean
 ```
 
-- insert this in conf.py file
+- Every time the file are added use repeat the step for the apidoc to generate the files
 
 ### Steps
 
@@ -98,7 +96,7 @@ extensions = ['sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
 - Modify the index.rst above toctree code
 
 ```rst
-.. automodule::main
+.. automodule::main                   #main is the file name
    :members:
 ```
 
