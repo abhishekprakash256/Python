@@ -48,5 +48,3 @@ p1 = subprocess.run(['ls','-la','dne'], stderr= True, text= True , check = True)
 ```
 
 - to ignore them use the redirection to NULL
-
-- 
