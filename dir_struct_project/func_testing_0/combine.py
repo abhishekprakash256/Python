@@ -19,6 +19,7 @@ Algo :
 	command make html
 """
 
+make the doc
 
 
 
