@@ -3,7 +3,7 @@
 ### Description 
 
 The project helps to automate the process of the sphix documentation and the sphix-apidoc. 
-
+the info will be added
 
 
 ##  
