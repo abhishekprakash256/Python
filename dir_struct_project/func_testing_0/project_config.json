@@ -6,7 +6,8 @@
 			"doc_dir": "docs",
 			"project_name" : "Project Name",
 			"author" : "Author",
-			"version" : "1.0.0"
+			"version" : "1.0.0",
+			"theme" :"sphinx_rtd_theme"
 		}		
 	]
 }
