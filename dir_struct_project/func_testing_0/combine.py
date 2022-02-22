@@ -20,6 +20,7 @@ Algo :
 """
 
 make the doc
+add the files
 
 
 
