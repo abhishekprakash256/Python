@@ -1,0 +1,12 @@
+{
+
+	"repo_details" :[
+		{
+			"code_dir": "files",
+			"doc_dir": "docs",
+			"project_name" : "Project Name",
+			"author" : "Author",
+			"version" : "1.0.0"
+		}		
+	]
+}

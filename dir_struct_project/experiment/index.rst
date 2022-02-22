@@ -8,10 +8,10 @@ Welcome to ProjectName's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents:  
 
-
-
+   test.rst
+   test_0.rst
 Indices and tables
 ==================
 
