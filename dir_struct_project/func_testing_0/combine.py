@@ -73,3 +73,4 @@ for i in code_files:
 	#copying the content of the file to another
 	shutil.copyfile('template.rst',i.split(".")[0]+".rst")
 
+#make the file now
