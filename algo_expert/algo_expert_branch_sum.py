@@ -27,7 +27,7 @@ def function_2(node,running_sum,sum_lst):   #the recursion function
 	function_2(root.left, new_running_sum, sum_lst)         #recursion calling
 	function_2(root.right,new_running_sum, sum_lst)	        #recursion calling 
 
-
+                 
 
 
 class Node:
