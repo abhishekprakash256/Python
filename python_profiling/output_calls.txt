@@ -1,0 +1,14 @@
+Thu Jun 30 17:44:49 2022    output.dat
+
+         8999893 function calls in 2.448 seconds
+
+   Ordered by: call count
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+  8999889    0.542    0.000    0.542    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    2.448    2.448 {built-in method builtins.exec}
+        1    1.906    1.906    2.448    2.448 /home/abhi/Programming/Python_programming/python_profiling/profiling.py:11(number)
+        1    0.000    0.000    2.448    2.448 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
