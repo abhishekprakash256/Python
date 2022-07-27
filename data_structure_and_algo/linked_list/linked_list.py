@@ -3,44 +3,80 @@ make the singly linked list of the in the python
 from the scrath implementation 
 """
 
+class node():
+	def __init__(self,val= None,next = None):
+		self.val = val
+		self.next = next
+
+
 class linked_list():
 	"""
 	The linked list class to make the list 
 	with using the nodes 
 	"""
-	def __init__(self,value,next =None):
-		self.value = value
-		self.next = next
+	def __init__(self):
+		self.head = None
 
-	def itertator(self,node):
-		self.node = node
-		cur = self.node
+	def insert_element(self,val):
+		new_node = node(val)
+		if self.head == None:
+			self.head = new_node
+		
+		else:
+			curr = self.head 
+			while True:
+				if curr.next is None:
+					curr.next = new_node
+					break
+				curr = curr.next
+
+		return "the value is inserted"
+
+	def delete_element(self,val):
+		new_node = node(val)
+		
+		curr = self.head
 		while True:
-			if cur.next is None:
-				print(cur.value)
+			if curr.next is new_node.val:
+				curr.next = curr.next.next
+				curr.next.next = None
+				return "The elememt is deleted"
 				break
-			print(cur.value)
-			cur = cur.next
+			elif curr.next is None:
+				return "The elememt is not found"
+				break
+			curr = curr.next
+
+	def print_list(self):
+		curr = self.head
+		while True:
+			if curr.next is None:
+				print(curr.val)
+				break
+			print(curr.val)
+			curr = curr.next
+
+		return "the list is printed"
 
 
 
 
 
-#make a simple linked list 
+my_list = linked_list()
+my_list.insert_element(4)
+my_list.insert_element(5)
+my_list.insert_element(6)
+my_list.insert_element(7)
+my_list.insert_element(8)
+my_list.insert_element(9)
+my_list.insert_element(10)
 
 
-#making the connection in the two 
 
+my_list.delete_element(7)
 
+print(" -------------------- the list values  are being printed --------------- ")
 
-
-node1 = linked_list(5)
-node2 = linked_list(6)
-node3 = linked_list(7)
-node4 = linked_list(8)
-
-node1.next = node2
-node2.next = node3
-node3.next = node4
+print(my_list.print_list())
 
 
