@@ -32,21 +32,6 @@ class linked_list():
 
 		return "the value is inserted"
 
-	def delete_element(self,val):
-		new_node = node(val)
-		
-		curr = self.head
-		while True:
-			if curr.next is new_node.val:
-				curr.next = curr.next.next
-				curr.next.next = None
-				return "The elememt is deleted"
-				break
-			elif curr.next is None:
-				return "The elememt is not found"
-				break
-			curr = curr.next
-
 	def print_list(self):
 		curr = self.head
 		while True:
@@ -58,6 +43,49 @@ class linked_list():
 
 		return "the list is printed"
 
+
+
+	def delete_element(self,val):
+		"""
+		To delete the  element in the list 
+		Args:
+			val(int) : the value to search for 
+		Return:
+			None 
+		""" 
+		#make the node 
+		new_node = node(val)
+
+		curr = self.head
+		#start the loop and find the curr value 
+
+		while True:
+			#delete the head first if found
+			if new_node.val == self.head.val:
+
+				self.head = curr.next
+
+				print("The elememt is deleted and it is head node")
+				break 
+
+			#delete the middle node
+
+			elif curr.next.val == new_node.val:
+				print("found")
+				print("the val of curr", curr.val)
+				
+				#delete the value now 
+				prev_node = curr
+				
+				curr.next = curr.next.next
+				print("The element is found and deleted from the list")
+				break
+
+			elif curr.next is None:
+				print("the element is not found")
+				break
+
+			curr = curr.next  
 
 
 
@@ -77,6 +105,5 @@ my_list.delete_element(7)
 
 print(" -------------------- the list values  are being printed --------------- ")
 
+
 print(my_list.print_list())
-
-
