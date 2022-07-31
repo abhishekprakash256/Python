@@ -84,7 +84,6 @@ class linked_list:
 
             elif curr.next.val == new_node.val:
                 # delete the value now
-                prev_node = curr
 
                 curr.next = curr.next.next
                 print("The element is found and deleted from the list")
