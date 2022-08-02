@@ -83,7 +83,7 @@ class Solution:
 		carry = 0 
 		sum = 0
 
-		#add the two numbers 
+		#add the two numbers for the two
 
 		for i in range(bigger_len):
 			#sum logic
