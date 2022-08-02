@@ -60,20 +60,23 @@ l8 = [9,9]
 l9 = [9,9,8]
 l10 = [7]
 
+def length_list(lst):
+	count = 0
+	for i in lst:
+		count+=1
+	return count
+
+
 class Solution:
-	def length_list(lst):
-		count = 0
-		for i in lst:
-			count+=1
-		return count
+	
 	def addTwoNumbers(self, l1, l2) ->list:
 		self.l1 = l1
 		self.l2 = l2
 		#add the two number
 
 		#to make the two list equal 
-		length1 = len(l1)
-		length2 = len(l2)
+		length1 = length_list(l1)
+		length2 = length_list(l2)
 
 		if length1 > length2: 	
 			bigger_len = length1
@@ -114,7 +117,7 @@ class Solution:
 
 			out.append(digit)
 
-		if len(out) == bigger_len and carry !=0:
+		if length_list(out) == bigger_len and carry !=0:
 			out.append(carry)
 
 
