@@ -97,20 +97,9 @@ class Solution:
 		for i in range(bigger_len):
 			#sum logic
 			sum = l1[i] + l2[i] + carry
-			
-			#condition for the carry and the digit 
 
-			if 0<= sum <=9:
-				carry = 0
-				digit = sum
-
-			elif 10 <= sum <=19:
-				carry = 1
-				digit = sum%10
-
-			else:
-				digit = 0
-				carry = 20%10
+			carry = sum//10
+			digit = sum%10
 
 			out.append(digit)
 
