@@ -12,6 +12,12 @@ out = 2
 in = pwwkew
 out = 3 wke
 
+
+Success ------------------------------------------------------------------------------------------------------------------
+Details
+Runtime: 1506 ms, faster than 5.08% of Python3 online submissions for Longest Substring Without Repeating Characters.
+Memory Usage: 14.2 MB, less than 13.37% of Python3 online submissions for Longest Substring Without Repeating Characters.
+
 """
 
 
