@@ -5,6 +5,9 @@ Find the area of the water that has most of the area, from the list of the numbe
 #test cases
 
 
+#the program has the run time error 
+
+
 import time
 
 inp = [1,8,6,2,5,4,8,3,7]
