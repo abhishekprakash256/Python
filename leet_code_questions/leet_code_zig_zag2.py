@@ -27,10 +27,9 @@ class Solution:
     	returns :
     		ordered_str (str) : the string rerranged as the number of rows
     	"""
+  
 
-
-
-
+    	
 
     	return s
 
