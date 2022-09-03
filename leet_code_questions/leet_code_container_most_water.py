@@ -17,7 +17,7 @@ out3 = 12
 
 
 class Solution:
-	def maxArea(self, height: List[int]) -> int:
+	def maxArea(self, height: list) -> int:
 		"""
 		The function finds the max area from the list
 		Args:
@@ -25,10 +25,18 @@ class Solution:
 		Returns:
 			area (int) : The max area 
 		""" 
+		temp_area = 0 
 
-		area = 0
+		max_area = 0
 
-		return area 
+		for i in range(len(height)):
+			for j in range(i+1, len(height)):
+				temp_area = (abs(height[i] - height[j])) * ((j - i))
+				if temp_area > max_area:
+					max_area = temp_area
+
+
+		return max_area 
 
 if __name__ == '__main__':
 	soln = Solution()
