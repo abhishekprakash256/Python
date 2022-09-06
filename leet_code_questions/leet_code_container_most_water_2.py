@@ -40,13 +40,15 @@ class Solution:
 		while left < right:
 			temp_area = min(height[right], height[left]) * (right - left) 
 
+			max_area = max(temp_area,max_area)
+
 			if height[left] > height[right]:
 				right -=1
 			else:
 				left +=1
 
-			if temp_area > max_area:
-				max_area = temp_area
+			#if temp_area > max_area:
+			#	max_area = temp_area
 
 		return max_area 
 
@@ -55,6 +57,6 @@ class Solution:
 if __name__ == '__main__':
 	start_time = time.time()
 	soln = Solution()
-	res = soln.maxArea(inp5)
+	res = soln.maxArea(inp)
 	print(res)
 	print("--- %s seconds ---" % (time.time() - start_time))
