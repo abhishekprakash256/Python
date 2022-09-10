@@ -49,15 +49,12 @@ class Solution:
 
     	pointer = 0
     	temp1 = head
-    	while pointer < index:
-    		print("the point", pointer)
-    		
+    	while pointer < index -1:
     		temp1 = temp1.next
     		pointer +=1
-    		print(temp1.val)
     		
 
-    	return temp1.val
+    	return temp1
 
 if __name__ == '__main__':
 	#to make the linked list
