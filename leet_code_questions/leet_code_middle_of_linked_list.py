@@ -47,13 +47,14 @@ class Solution:
     	else:
     		index = (count+1)/2
 
-    	print(index)
     	pointer = 0
-    	while pointer <=index+1:
-    		pointer +=1
-    		temp1 = head
+    	temp1 = head
+    	while pointer < index:
+    		print("the point", pointer)
+    		
     		temp1 = temp1.next
-
+    		pointer +=1
+    		print(temp1.val)
     		
 
     	return temp1.val
