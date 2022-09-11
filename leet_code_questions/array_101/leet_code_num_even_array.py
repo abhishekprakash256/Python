@@ -21,12 +21,23 @@ class Solution:
 		Returns:
 			num_even (int) : the number of the even number in the list
 		"""
-		
-		while nums :
-			
+		num_even = 0
+		for i in nums:
+			count = 0
+			while True:
+				if i/10 < 1:
+					count+=1
+					break
+				else:
+					i = i/10
+					count+=1
+			if count % 2 ==0:
+				num_even +=1
+
+		return num_even
 
 
 if __name__ == '__main__':
 	Soln = Solution()
-	res = Soln.findNumbers(Input)
+	res = Soln.findNumbers(Input2)
 	print(res)
