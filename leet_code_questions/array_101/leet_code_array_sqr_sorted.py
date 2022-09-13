@@ -30,7 +30,6 @@ class Solution:
 
         squared_lst.sort()
 
-
         return squared_lst
 
 if __name__ == '__main__':
