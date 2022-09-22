@@ -1,6 +1,6 @@
 """
 same question not using the sortred method 
-using the sorting logic implementation 
+using the two pointer approach
 
 """
 
@@ -25,20 +25,27 @@ class Solution:
 		Returns:
 			squared_list (list) : the sorted list of the squaures of the num
 		"""
+		left = 0
+
+		right = len(nums) -1 
+
 		sorted_lst = []
 
-		sorted_map = {}
+		while left <= right:
 
-		for i in nums:
-			#to make the storage
+			left_sqre = nums[left]*nums[left]
+			right_sqre = nums[right]*nums[right]
+
+			if right_sqre > left_sqre:
+				sorted_lst.insert(0,right_sqre)
+				right -=1
+			else:
+				sorted_lst.insert(0,left_sqre)
+				left +=1
 			
-
-
-
-		return nums 
-
+		return sorted_lst 
 
 if __name__ == '__main__':
 	soln = Solution()
-	res = soln.sortedSquares(nums)
+	res = soln.sortedSquares(Input)
 	print(res)
