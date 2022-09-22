@@ -45,6 +45,12 @@ class Solution:
 			
 		return sorted_lst 
 
+class Solution_new:
+    def sortedSquares_2(self, nums: List[int]) -> List[int]:
+        ls=[i*i for i in nums]
+        ls.sort()
+        return ls
+
 if __name__ == '__main__':
 	soln = Solution()
 	res = soln.sortedSquares(Input)
