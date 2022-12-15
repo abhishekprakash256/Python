@@ -11,7 +11,11 @@ out2 =  [1,2,3]
 lst3 = [0]
 out3 = [0]
 
+lst4 = [1,0,2]
+out4 = [1,0,0]
 
+lst5 = [1,0,2,3,0,4,5,0]
+out5 = [1,0,0,2,3,0,0,4]
 
 class Solution:
 	def duplicateZeros(self, arr:list):
@@ -27,14 +31,16 @@ class Solution:
 		while i< length_arr:
 			if arr[i] == 0:
 				arr.insert(i+1,0)
+				arr.pop()
 				i+=2
 			else:
 				i+=1 
 
-		return arr[0:length_arr]
+		return None
 
 
 if __name__ == '__main__':
 	sol = Solution()
-	res = sol.duplicateZeros(lst)
-	print(res)
+	print(lst5)
+	sol.duplicateZeros(lst5)
+	print(lst5)
