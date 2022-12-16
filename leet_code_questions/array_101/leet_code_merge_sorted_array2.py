@@ -101,7 +101,7 @@ out2 = [1]
 
 
 class Solution:
-	def merge_array(self,list1,m,list2,n):
+	def merge(self,list1,m,list2,n):
 		
 		i = 0
 		j = 0 
@@ -109,7 +109,7 @@ class Solution:
 
 		while(i+j) < (m+n):
 
-			if list1[i] < list2[j]:
+			if (list1[i] < list2[j]) and list1[i] !=0 and list2[j] !=0:
 				combined_array.append(list1[i])
 				if i == m:
 					i+=0
@@ -117,22 +117,27 @@ class Solution:
 					j+=1
 				else:
 					i+=1
-			elif list1[i] == list2[j]:
+			elif (list1[i] == list2[j]) and list1[i] !=0 and list2[j] !=0:
 				combined_array.append(list1[i])
+				combined_array.append(list2[j])
 				i+=1
 				j+=1
 			else:
-				combined_array.append(list2[j])
-				if j == n:
-					j+=0
-					combined_array.append(list1[i])
-					i+=1
+				if list1[i] !=0 and list2[j] !=0:
+					combined_array.append(list2[j])
+					if j == n:
+						j+=0
+						combined_array.append(list1[i])
+						i+=1
+					else:
+						j+=1
 				else:
-					j+=1
+					pass
+
 
 		return combined_array
 
 if __name__ == '__main__':
 	sol = Solution()
-	res = sol.merge_array(nums1,m,nums2,n)
+	res = sol.merge(nums1,m,nums2,n)
 	print(res)
