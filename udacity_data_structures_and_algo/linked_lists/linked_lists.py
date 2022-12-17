@@ -70,8 +70,11 @@ class Linked_list:
 	def add_node(self,pos,data):
 		self.pos = pos
 		node = Node(data)
+		count = 0 
+		temp = self.head
 
-		
+		while count != self.pos:
+			
 
 
 my_list = Linked_list()
