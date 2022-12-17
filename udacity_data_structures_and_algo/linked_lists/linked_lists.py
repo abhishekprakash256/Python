@@ -87,14 +87,13 @@ class Linked_list:
 	def delete_node(self,data):
 		node = Node(data)
 		temp = self.head
+		self.data = data
 
 		while True:
-
-			while True:
-				if self.data != temp.data:
-					temp = temp.next
-				else:
-					
+			if temp.next.data == self.data:
+				temp.next = temp.next.next
+				break
+			temp = temp.next
 
 
 
@@ -106,9 +105,13 @@ my_list.set_head(3)
 
 my_list.add_node(1,4)
 
+my_list.add_node(2,8)
+
 my_list.add_node(3,5)
 
 my_list.set_head(10)
+
+my_list.delete_node(5)
 
 print(my_list.print_list())
 print(my_list.get_length())
