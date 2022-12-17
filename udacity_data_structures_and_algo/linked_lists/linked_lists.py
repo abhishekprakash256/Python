@@ -54,7 +54,7 @@ class Linked_list:
 
 
 	def get_length(self):
-		count = 0
+		count = 1
 		temp = self.head 
 
 		while True:
@@ -70,11 +70,32 @@ class Linked_list:
 	def add_node(self,pos,data):
 		self.pos = pos
 		node = Node(data)
-		count = 0 
+		count = 1 
 		temp = self.head
 
-		while count != self.pos:
+		while True:
+			if count < self.pos:
+				count +=1
+			else:
+				node.next = temp.next
+				temp.next = node
+				break
+
+			temp = temp.next
 			
+
+	def delete_node(self,data):
+		node = Node(data)
+		temp = self.head
+
+		while True:
+
+			while True:
+				if self.data != temp.data:
+					temp = temp.next
+				else:
+					
+
 
 
 my_list = Linked_list()
@@ -83,6 +104,11 @@ my_list.set_head(2)
 
 my_list.set_head(3)
 
+my_list.add_node(1,4)
+
+my_list.add_node(3,5)
+
+my_list.set_head(10)
 
 print(my_list.print_list())
 print(my_list.get_length())
