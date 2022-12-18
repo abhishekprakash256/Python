@@ -13,7 +13,6 @@ nums3 = [1,1,1,1,2]
 out3 = [1]
 
 
-
 """
 The apprach is the two pointer approach 
 one before and other a one point after that 
