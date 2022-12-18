@@ -100,6 +100,8 @@ n1 = 0
 out2 = [1]
 
 
+#the solution doesn't work 
+
 class Solution:
 	def merge(self,list1,m,list2,n):
 		
@@ -123,17 +125,13 @@ class Solution:
 				i+=1
 				j+=1
 			else:
-				if list1[i] !=0 and list2[j] !=0:
-					combined_array.append(list2[j])
-					if j == n:
-						j+=0
-						combined_array.append(list1[i])
-						i+=1
-					else:
-						j+=1
+				combined_array.append(list2[j])
+				if j == n:
+					j+=0
+					combined_array.append(list1[i])
+					i+=1
 				else:
-					pass
-
+					j+=1
 
 		return combined_array
 
