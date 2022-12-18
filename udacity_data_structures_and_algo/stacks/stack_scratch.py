@@ -23,10 +23,6 @@ class Stack:
 
 	def pop(self):
 		temp = self.head
-		temp_head  = self.head
-		temp.next = self.head
-		temp_head.next = None
-
 
 	def print_stack(self):
 		temp = self.head
@@ -59,5 +55,6 @@ my_stack.push(5)
 
 my_stack.pop()
 
+#the pop function doesn't work 
 
 my_stack.print_stack()
