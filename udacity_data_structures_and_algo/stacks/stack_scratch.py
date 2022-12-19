@@ -22,7 +22,7 @@ class Stack:
 			self.head = node
 
 	def pop(self):
-		temp = self.head
+		pass
 
 	def print_stack(self):
 		temp = self.head
@@ -53,7 +53,7 @@ my_stack.push(5)
 
 #pop the elements 
 
-my_stack.pop()
+#my_stack.pop()
 
 #the pop function doesn't work 
 
