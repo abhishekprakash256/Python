@@ -23,7 +23,18 @@ class Queue:
 		else:
 			node.next = self.tail
 			self.tail = node
-		
+
+			temp = self.head
+
+			while True:
+				if temp.next is None:
+					self.tail = temp
+					break
+				temp = temp.next
+	
+	def dequeue(self,data):
+		pass
+
 
 	def print_queue(self):
 
