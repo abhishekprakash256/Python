@@ -61,6 +61,8 @@ my_stack.push(5)
 my_stack.pop()
 my_stack.pop()
 
+my_stack.push(6)
+
 #the pop function doesn't work 
 
 my_stack.print_stack()
