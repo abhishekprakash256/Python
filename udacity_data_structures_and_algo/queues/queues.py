@@ -20,9 +20,28 @@ class Queue:
 
 		if self.tail is None:
 			self.tail = node
+		else:
+			node.next = self.tail
+			self.tail = node
+		
 
-		node = self.tail
-		self.tail = node
+	def print_queue(self):
+
+		temp =self.tail
+		while True:
+			print(temp.data)
+			if temp.next is None:
+				break
+			temp = temp.next
 
 
+#initilaize the queue
+my_queue = Queue()
 
+#enqueue the elements in the queue
+my_queue.enqueue(2)
+my_queue.enqueue(3)
+my_queue.enqueue(4)
+
+
+print(my_queue.print_queue())
