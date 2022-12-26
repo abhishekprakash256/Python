@@ -14,6 +14,10 @@ out3 = True
 
 
 
+
+#the solution works for the increasing mountain and not for the decresaing mountain
+
+
 class Solution:
 	def validMountainArray(self,arr:list):
 		"""
