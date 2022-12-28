@@ -23,7 +23,6 @@ lst4 = [1,2,3,4,5]
 target4 = 1
 
 
-
 def binary_search(nums:list, target:int) :
 	"""
 	The implemetation of the binary search in the recursion form
