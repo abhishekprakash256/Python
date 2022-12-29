@@ -1,5 +1,5 @@
 word = 'datagy'
 
-sorted_word = ''.join(sorted(word))
+test = {0:["ate","eat"],2:["cat","dog","tom"],3:["one"]}
 
-print(sorted_word)
+print(test[2])
