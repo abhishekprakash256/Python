@@ -34,27 +34,21 @@ class Solution:
 		Return:
 			arrange_lst: (list) The list of the arranged anagram together in sub list
 		"""
+		anagram_map = {}
+
+		for word in strs:
+			sorted_word = ''.join(sorted(word))
+
+			if sorted_word not in anagram_map:
+				new_lst = []
+				anagram_map[sorted_word] = new_lst
+			anagram_map[sorted_word].append(word) 
+
 		arranged_lst = []
-		sub_lst = []
-		i = 0 
-		while len(strs) != 0:
-			
-			first_word = ''.join(sorted(strs[i]))
-			strs.remove(strs[i])
+		for i in anagram_map.values():
+			arranged_lst.append(i)
 
-			if first_word == second_word:
-				sub_lst.append()
-
-
-
-
-			
-
-
-
-
-			
-	
+		return arranged_lst
 
 if __name__ == '__main__':
 	sol = Solution()
