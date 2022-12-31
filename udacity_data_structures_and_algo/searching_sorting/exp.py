@@ -1,6 +1,6 @@
 arr = [1,2,3,4,5,6,7,8,8,9,10]
 
-
+"""
 
 def divide_arr(arr):
 	length = len(arr)
@@ -54,3 +54,9 @@ def combine_arr(arr1,arr2):
 	return final_arr
 
 print(combine_arr(nums0,nums1))
+
+"""
+
+test = "ate"
+
+print(sorted(test))
