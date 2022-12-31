@@ -40,8 +40,8 @@ class Solution:
 			sorted_word = ''.join(sorted(word))
 
 			if sorted_word not in anagram_map:
-				new_lst = []
-				anagram_map[sorted_word] = new_lst
+				val_lst = []
+				anagram_map[sorted_word] = val_lst
 			anagram_map[sorted_word].append(word) 
 
 		arranged_lst = []
