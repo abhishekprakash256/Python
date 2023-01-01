@@ -31,8 +31,8 @@ lst2 = [1,1,2,3]
 
 lst3 = [3,4,5,6,6]
 
-lst4 = [1,1]
-lst5 = [2,2,3]
+lst4 = [1]
+lst5 = [2]
 
 
 def join_lst(nums1:list, nums2:list) ->list:
@@ -52,7 +52,6 @@ def join_lst(nums1:list, nums2:list) ->list:
 	combined_lst = []
 	i,j,k = 0,0,0
 	length = len(nums1) + len(nums2) - 1
-	print(length)
 
 	while k < length:
 		if i == len(nums1):
@@ -64,18 +63,15 @@ def join_lst(nums1:list, nums2:list) ->list:
 			i+=1
 
 		else:
-			print("inside else")
 			if nums1[i] == nums2[j]:
 				combined_lst.append(nums1[i])
 				combined_lst.append(nums2[j])
 				i+=1
 				j+=1
 			elif nums1[i] < nums2[j]:
-				print("one")
 				combined_lst.append(nums1[i])
 				i+=1
 			elif nums1[i] > nums2[j]:
-				print("two")
 				combined_lst.append(nums2[j])
 				j+=1
 
