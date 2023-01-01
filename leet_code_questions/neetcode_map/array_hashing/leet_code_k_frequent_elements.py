@@ -16,8 +16,6 @@ k3 = 1
 
 #complexity wanted is nlogn
 
-
-
 #the brute force approach
 
 class Solution:
