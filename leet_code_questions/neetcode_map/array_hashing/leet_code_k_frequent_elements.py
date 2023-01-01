@@ -14,36 +14,44 @@ out2 = 1
 nums3 = [-1,-1]
 k3 = 1
 
+
+nums4 = [-1,-1,-2,-2,-2,3]
+
+k4 = 1
 #complexity wanted is nlogn
 
 #the brute force approach
 
+
 class Solution:
-    def topKFrequent(self, nums: list, k: int)-> list:
-    	"""
-    	The function takes the list of the integers and return the most frequnet elements
-    	Args:
-    		nums: (list) The list of the intgers 
-    		k: (int) The number of the most frequent elements
+	def topKFrequent(self, nums: list, k: int)-> list:
+		"""
+		The function takes the list of the integers and return the most frequnet elements
+		Args:
+			nums: (list) The list of the intgers 
+			k: (int) The number of the most frequent elements
 		Return:
 			frequency_lst: (list) the frquency of the most occured elements
-    	"""
-    	frequency_map = {}
+		"""
+		frequency_map = {}
 
-    	for number in nums:
-    		if number not in frequency_map:
-    			frequency_map[number] = 0
-    		count = frequency_map[number]
-    		frequency_map[number] = count+1 
+		for number in nums:
+			if number not in frequency_map:
+				frequency_map[number] = 0
+			count = frequency_map[number]
+			frequency_map[number] = count+1 
 
-    	sorted_map = sorted(frequency_map.items(), key=lambda x:x[1], reverse=True)
+		sorted_map = sorted(frequency_map.items(), key=lambda x:x[1], reverse=True)
 
-    	print(sorted_map)
-    	return sorted_map[0:k]
+		final_lst = []
+
+		for i in sorted_map:
+			final_lst.append(i[0])
+		return final_lst[0:k]
 
 
 if __name__ == '__main__':
 	sol = Solution()
-	res = sol.topKFrequent(nums,k)
+	res = sol.topKFrequent(nums4,k4)
 	print(res)
 
