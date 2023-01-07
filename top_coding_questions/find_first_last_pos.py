@@ -17,7 +17,11 @@ target2 = 4
 out2 = [-1,-1]
 
 
-#working solution
+inp3 = [1,2,2]
+target3 = 2
+out3 = [1,2]
+
+#working solution the complexity is the O(n) time 
 
 def find_pos(nums:int, arr:list)->list:
 	"""
@@ -34,7 +38,7 @@ def find_pos(nums:int, arr:list)->list:
 	if len(arr) == 0:
 		return [-1,-1]
 
-	for i in range(len(arr)-1):
+	for i in range(len(arr)):
 		if arr[i] not in mapper and arr[i] == nums:
 			mapper[arr[i]] = i
 			pos_lst.append(i)
@@ -42,13 +46,12 @@ def find_pos(nums:int, arr:list)->list:
 
 	if nums not in mapper.keys():
 		return [-1,-1]
+
 	pos_lst.append(mapper[nums])
 	return pos_lst
 
 
 
-
-
 if __name__ == '__main__':
-	res = find_pos(target2,inp2)
+	res = find_pos(target3,inp3)
 	print(res)

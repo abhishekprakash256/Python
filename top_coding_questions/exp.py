@@ -8,12 +8,7 @@ for i in word:
 		mapper[i] = mapper[i] +1
 print(mapper)
 """
+positive_infinity = float('inf')
 
-mapper2 = {"u":2,"r":2,"t":1,"e":1}
-
-mapper3 = {"u":1,"t":2,"r":1,"e":1}
-
-if mapper == mapper3:
-	print(True)
-else:
-	print(False)
+x = int(positive_infinity)
+print(type(positive_infinity))
