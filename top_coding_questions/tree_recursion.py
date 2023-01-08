@@ -36,8 +36,6 @@ def tree_priter(node):
 
 
 
-
-
 #------------------the tree making --------------------------
 root = Node(5)
 root.left = Node(4)
