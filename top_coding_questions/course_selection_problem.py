@@ -1,0 +1,3 @@
+"""
+The course selection problem
+"""

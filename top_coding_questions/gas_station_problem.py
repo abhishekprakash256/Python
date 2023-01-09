@@ -76,7 +76,6 @@ def gas_station(gas:list,cost:list)->int:
 		count,running_sum = 0,0
 		while True:
 			running_sum = (gas[j] - cost [j]) + running_sum
-			#print(running_sum)
 			if running_sum < 0:
 				break
 			elif j == length - 1:
