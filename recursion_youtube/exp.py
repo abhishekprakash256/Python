@@ -41,3 +41,14 @@ def cal_prod(lst):
 		return lst[len(lst)-1]*cal_prod(lst[0:len(lst)-1])
 
 print(cal_prod(lst))
+
+
+test_str = "hello"
+
+def revese_string(word):
+	if len(word) == 0:
+		return ""
+	else:
+		return word[len(word)-1]+revese_string(word[0:len(word)-1])
+
+print(revese_string(test_str))

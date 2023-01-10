@@ -4,8 +4,11 @@ the program to make the string revere using the recursion
 """
 
 inp = "hello"
+inp2 = "Sashimi"
+inp3 = "Chai"
 
-def reverse_string(inp:str)->str:
+
+def reverse_string(word:str)->str:
 	"""
 	The function takes the string and reverese the string 
 	Args:
@@ -18,12 +21,9 @@ def reverse_string(inp:str)->str:
 
 	#what to do in each iteration
 
-	if len(inp) == 0:
+	if len(word) == 0:
 		return ""
-
 	else:
-		rev_string = ""
-		#reverse_string(inp[0:len(inp)-1])
-		return rev_string + reverse_string(inp[0:len(inp)-1])
+		return word[len(word)-1]+reverse_string(word[0:len(word)-1])
 
-print(reverse_string(inp))
+print(reverse_string(inp3))
