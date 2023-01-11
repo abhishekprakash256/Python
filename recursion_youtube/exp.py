@@ -14,7 +14,7 @@ print(x+last_piece)
 
 """
 
-
+"""
 def fact(nums):
 	if nums == 1 or nums == 0:
 		return 1
@@ -52,3 +52,22 @@ def revese_string(word):
 		return word[len(word)-1]+revese_string(word[0:len(word)-1])
 
 print(revese_string(test_str))
+
+
+print(test_str[0:(len(test_str)+1)//2])
+print(test_str[(len(test_str)+1)//2:len(test_str)])
+
+word = "ana"
+
+print(word[0:(len(word)+1)//2])
+print(word[(len(word)+1)//2:len(word)])
+
+if (word[0]) == (word[len(word)-1]):
+	print(True)
+"""
+
+print(233%2)
+print(233//2)
+
+print(8%2)
+print(8//2)

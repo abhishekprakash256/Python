@@ -26,4 +26,4 @@ def reverse_string(word:str)->str:
 	else:
 		return word[len(word)-1]+reverse_string(word[0:len(word)-1])
 
-print(reverse_string(inp3))
+print(reverse_string(inp))
