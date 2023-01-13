@@ -10,6 +10,7 @@ def chain_sum(nums:int,lst:list)->bool:
 		nums: (int) The target sum to find
 		lst : (list) the list of the integers
 	Return:
-		
+
 
 	"""
+	
