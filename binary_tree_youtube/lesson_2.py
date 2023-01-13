@@ -1,4 +1,8 @@
 """
+The binary tree printer algorithm 
+"""
+
+"""
 implement the DFS using the stack in the python from scratch
 """
 
@@ -54,27 +58,17 @@ def dfs_tree(root):
 	#implement a stack using the list 
 
 	stack = []
-	temp = root
-	stack.append(temp)
+	current = root
+	stack.append(root)
 
-	while len(stack) != 0 :
-		if temp.left is not None and temp.right is not None:
-			stack.append(temp.right)
-			stack.append(temp.left)
-			print(temp.data)
+	while len(stack) > 0 :
+		current = stack.pop()
+		print(current.data)
 
-		elif temp.left is None and temp.right is not None:
-			stack.append(temp.right)
-			print(temp.data)
-
-		elif temp.right is not None and temp.left is None:
-			stack.append(temp.left)
-			print(temp.data)
-	
-		else:
-			print(temp.data)
-
-		temp = stack.pop()
+		if (current.right):
+			stack.append(current.right)
+		elif (current.left):
+			stack.append(current.left)
 
 	return "Done Printing"
 

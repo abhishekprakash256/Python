@@ -12,7 +12,6 @@ stack.append(25)
 
 
 print(stack)
-
-while len(stack)!=0:
-	temp = stack.pop()
-	print(temp)
+first = stack.pop(0)
+print(first)
+print(stack)
