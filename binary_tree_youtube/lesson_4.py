@@ -62,16 +62,16 @@ def bfs_tree(root):
 			queue.append(temp.left)
 			queue.append(temp.right)
 		elif temp.left is not None and temp.right is None:
-			queue.append(temp.right)
-		elif temp.right is not None and temp.left is None:
 			queue.append(temp.left)
+		elif temp.right is not None and temp.left is None:
+			queue.append(temp.right)
 
 		print(temp.data)
 
+	return "List Printing Done"
 
 		
 		
-
 if __name__ == '__main__':
 	res = bfs_tree(root)
 	print(res)
