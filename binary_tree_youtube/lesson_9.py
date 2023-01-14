@@ -1,9 +1,7 @@
 """
-The tree sum problem finding the sum of the all nodes of the tree
-using the iterative and recursive approach
-
+The tree min value problem 
+find the min value in the tree and return it
 """
-
 
 
 class Node:
@@ -44,88 +42,85 @@ print(root.right.right.data)
 #-------------------------------------
 
 
-def tree_sum_recursive(root)->sum:
+def min_tree_dfs(root):
 	"""
-	The program to find the sum of the all nodes of the tree
+	The program to find the min of the tree
 	Args:
 		root: (node) The root node of the tree
 	Returns:
 		sum: (int) The sum of the nodes of the tree 
 	"""
 
-	if root.left is None and root.right is None:
-		return root.data 
-	elif root.left is not None and root.right is not None:
-		return tree_sum_recursive(root.left) + tree_sum_recursive(root.right) + root.data
-	elif root.left is not None and root.right is None:
-		return tree_sum_recursive(root.left) + root.data
-	elif root.right is not None and root.left is None:
-		return tree_sum_recursive(root.right) + root.data
-
-
-def tree_sum_intertive_dfs(root)->sum:
-	"""
-	The program to find the sum of the all nodes of the tree
-	Args:
-		root: (node) The root node of the tree
-	Returns:
-		sum: (int) The sum of the nodes of the tree 
-	"""
 	stack = []
 	stack.append(root)
-	sum = 0
+	min_val = root.data
 
 	while len(stack) !=0:
 
 		temp = stack.pop()
-		sum = temp.data + sum
+		temp_min = temp.data
+
+		if temp_min <= min_val:
+			min_val = temp_min
 
 		if temp.right is not None and temp.left is not None:
 			stack.append(temp.right)
 			stack.append(temp.left)
-		elif temp.right is None and temp.left is not None:
+
+		elif temp.left is not None and temp.right is None:
 			stack.append(temp.left)
-		elif temp.left is None and temp.right is not None:
+
+		elif temp.right is not None and temp.left is None:
 			stack.append(temp.right)
 
-
-	return sum
-
+	return min_val
 
 
-def tree_sum_intertive_bfs(root)->sum:
+
+def min_tree_bfs(root):
 	"""
-	The program to find the sum of the all nodes of the tree
+	The program to find the min of the tree
 	Args:
 		root: (node) The root node of the tree
 	Returns:
 		sum: (int) The sum of the nodes of the tree 
 	"""
+
 	queue = []
 	queue.append(root)
-	sum = 0 
+	min_val = root.data
 
 	while len(queue) !=0:
 
 		temp = queue.pop(0)
-		sum = temp.data + sum
+		temp_min = temp.data
+
+		if temp_min <= min_val:
+			min_val = temp_min
 
 		if temp.right is not None and temp.left is not None:
 			queue.append(temp.left)
 			queue.append(temp.right)
+
 		elif temp.left is not None and temp.right is None:
 			queue.append(temp.left)
-		elif temp.left is None and temp.right is not None:
+
+		elif temp.right is not None and temp.left is None:
 			queue.append(temp.right)
 
-	return sum
+	return min_val
+
+
+
+
+
+
+
 
 
 
 if __name__ == '__main__':
-	res0 = tree_sum_recursive(root)
-	res1 = tree_sum_intertive_dfs(root) 
-	res2 = tree_sum_intertive_bfs(root)
+	res0 = min_tree_dfs(root)
+	res1 = min_tree_bfs(root)
 	print(res0)
 	print(res1)
-	print(res2)
