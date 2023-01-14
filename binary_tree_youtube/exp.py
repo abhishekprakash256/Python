@@ -11,7 +11,4 @@ stack.append(21)
 stack.append(25)
 
 
-print(stack)
-first = stack.pop(0)
-print(first)
-print(stack)
+print(min(stack))

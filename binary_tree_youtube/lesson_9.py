@@ -111,8 +111,20 @@ def min_tree_bfs(root):
 	return min_val
 
 
+def min_tree_recursive(root):
+	"""
+	The program to find the min of the tree using the recursive algorithm
+	Args:
+		root: (node) The root node of the tree
+	Returns:
+		sum: (int) The sum of the nodes of the tree 
+	"""
+	if root is None:
+		return float('inf')
+	left_min = min_tree_recursive(root.left)
+	right_min = min_tree_recursive(root.right)
 
-
+	return min(root.data,left_min,right_min)
 
 
 
@@ -122,5 +134,7 @@ def min_tree_bfs(root):
 if __name__ == '__main__':
 	res0 = min_tree_dfs(root)
 	res1 = min_tree_bfs(root)
+	res2 = min_tree_recursive(root)
 	print(res0)
 	print(res1)
+	print(res2)
