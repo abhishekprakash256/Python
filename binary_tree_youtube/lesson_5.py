@@ -78,7 +78,7 @@ def find_element_DFS_iterative(root,target:int)->bool:
 
 	return "Not Found"
 
-
+#recursive doesn't work properly
 
 def find_element_DFS_recursive(root,target:int)->bool:
 	"""
