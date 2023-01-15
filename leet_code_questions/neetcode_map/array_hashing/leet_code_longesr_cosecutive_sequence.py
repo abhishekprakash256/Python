@@ -19,11 +19,15 @@ nums4 = [1,1,1,1]
 out4 = 1 
 
 nums5 = [-1,-2,-3,-4,6,7]
-out5 = 5
+out5 = 4
 
 nums6 = [1,2,3,4,8,9,10,11,12,13,16]
 out6 = 4 
 
+nums7 =[1,2,0,1]
+
+
+#-------------------------the solution is not in o(n) time -----------------------------------------------------
 
 class Solution:
 	def longestConsecutive(self, nums:list) -> int:
@@ -34,29 +38,30 @@ class Solution:
 		Return:
 			max_consecutive : (int) The consecutive array of the integers
 		"""
-		nums.sort()
-		print(nums)
-
-		if len(nums) == 0:
+		if len(nums) == 1:
+			return 1
+		elif len(nums) == 0:
 			return 0
+
+		nums.sort()
 		count = 1
-		temp_count = 1
+		max_count = 1
 
-		for i in range(len(nums) -1 ):
-			if nums[i] == nums[i+1]:
-				temp_count +=0
-			elif nums[i]+1 == nums[i+1]:
-				temp_count +=1
+		for i in range(len(nums)-1):
+
+			if nums[i]+1 == nums[i+1]:
+				count +=1
+			
 			else:
-				if temp_count > count:
-					count = temp_count
-			print(count)
+				count = 1
 
+			if count >= max_count:
+				max_count = count
 
-		return count
+		return max_count
 
 
 if __name__ == '__main__':
 	sol = Solution()
-	res = sol.longestConsecutive(nums2)
+	res = sol.longestConsecutive(nums7)
 	print(res)
