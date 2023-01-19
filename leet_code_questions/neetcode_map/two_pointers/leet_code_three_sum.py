@@ -21,25 +21,42 @@ out2 = []
 class Solution:
     def threeSum(self, nums):
         
-        lst_sum = []
-        left = 0 
-        right = len(nums) - 1
+        lst_num = []
         nums.sort()
         print(nums)
         
         for i in range(0,len(nums)):
+            
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+
+            
             left = i+1
-            while left<=right:
+            right = len(nums) - 1
+
+            while left < right:
+                temp_lst = []
+                
                 if nums[left] + nums[right] + nums[i] == 0:
-                    lst_sum.append(left)
-                    lst_sum.append(right)
-                    lst_sum.append(i)
+                    
+                    if nums[left] != nums[right] != nums[i]:                    
+                        temp_lst.append(nums[left])
+                        temp_lst.append(nums[right])
+                        temp_lst.append(nums[i])
+
+                        left +=1
+                        while nums[left] == nums[left-1] and left < right:
+                            left +=1
+                    
 
                 elif nums[left] + nums[right] + nums[i] > 0:
                     right -=1
                 
                 elif nums[left] + nums[right] + nums[i] < 0:
                      left +=1
+                
+                if len(temp_lst) > 1:
+                    lst_num.append(temp_lst)
 
 
         return lst_num
