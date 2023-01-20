@@ -25,14 +25,18 @@ class Solution:
         while right <= length :
             
             if height[left] > 0 and height[left] > height[right]:
+                print("first")
                 trap_water = True
 
             elif trap_water == True and height[left] > height[right]:
+                print("second")
                 right +=1
 
             elif trap_water == True and height[left] < height[right]:
+                print("third")
                 trap_water = False
                 area = min(height[left],height[right]) * (right - left)
+                left +=1
 
                 while left < right:
                     
@@ -44,13 +48,15 @@ class Solution:
                 area_sum = area + area_sum
 
             elif height[left] == height[right]:
+                print("fourth")
                 trap_water = False
                 left +=1
                 right +=1
-            
-            print(right) 
-           
-            
+            else:
+                print("fifth")
+                left +=1
+                right +=1
+                        
         
         return area_sum
 
