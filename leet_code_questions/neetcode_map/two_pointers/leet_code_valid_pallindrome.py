@@ -29,5 +29,10 @@ def check_valid_pallindrome(s:str)->bool:
 
 	while left <=right:
 
-		if s[left] not in letter_map or s[right] not in letter_map:
-			pass
+		if s[left] not in letter_map:
+			left +=1
+		elif s[right] not in letter_map:
+			right -=1
+		else:
+			
+			
