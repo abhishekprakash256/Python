@@ -1,8 +1,8 @@
 """
 You are given an m x n integer matrix matrix with the following two properties:
 
-    Each row is sorted in non-decreasing order.
-    The first integer of each row is greater than the last integer of the previous row.
+	Each row is sorted in non-decreasing order.
+	The first integer of each row is greater than the last integer of the previous row.
 
 Given an integer target, return true if target is in matrix or false otherwise.
 
@@ -32,37 +32,37 @@ out3 = True
 
 
 class Solution:
-    def searchMatrix(self,matrix,target)->bool:
-        """
-        The function take the matrix and search for the desred output and returns True or False
-        Args:
-            matrix: (list) The matrix of the integers
-            target: (int) The number to search for 
-        Return: 
-            True or False: (bool) The target found or not 
-        """
+	def searchMatrix(self,matrix,target)->bool:
+		"""
+		The function take the matrix and search for the desred output and returns True or False
+		Args:
+			matrix: (list) The matrix of the integers
+			target: (int) The number to search for 
+		Return: 
+			True or False: (bool) The target found or not 
+		"""
 
-        left = [0,0]
-        right = [len(matrix)-1,len(matrix[0])-1]
+		left = [0,0]
+		right = [len(matrix)-1,len(matrix[0])-1]
 
-        while left[0] <= right[0] and left[1] <= left[1]:
+		while left[0] <= right[0] and left[1] <= left[1]:
 
-            mid = [(left[0] + right[0]) // 2, (left[1] + right[1]) // 2 ]
+			mid = [(left[0] + right[0]) // 2, (left[1] + right[1]) // 2 ]
 
-            if matrix[mid[0]][mid[1]] == target:
-                return True
+			if matrix[mid[0]][mid[1]] == target:
+				return True
 
-            elif target > matrix[mid[0]][mid[1]]:
-                left = [mid[0]+1,mid[1]+1]
-                for i in matrix[mid[0]]:
-                    if i == target:
-                        return True
-            else:
-                right = [mid[0]-1,mid[1]-1]
-                for i in matrix[mid[0]]:
-                    if i == target:
-                        return True
-        return False
+			elif target > matrix[mid[0]][mid[1]]:
+				left = [mid[0]+1,mid[1]+1]
+				for i in matrix[mid[0]]:
+					if i == target:
+						return True
+			else:
+				right = [mid[0]-1,mid[1]-1]
+				for i in matrix[mid[0]]:
+					if i == target:
+						return True
+		return False
 
 sol = Solution()
 res = sol.searchMatrix(mat0,tar0)
