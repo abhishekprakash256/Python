@@ -83,12 +83,53 @@ class Solution:
 				temp1 = temp1.next
 				temp2 = temp2.next
 
+	def addList(self,head1,head2):
+		"""
+		add the two list 
+		"""
 
+		temp1 = head1
+		temp2 = head2 
+
+		
+		while True:
+
+			if temp1.next == None and temp2.next == None:
+				sum = temp1.val + temp2.val
+				new_node = Node(sum)
+				cur.next = new_node
+				sum = 0
+				break
+				
+			elif temp1.next == None:
+				new_node = Node(temp2.val)
+				cur.next = new_node
+				temp2 = temp2.next
+			
+
+
+			elif temp2.next == None:
+				new_node = Node(temp1.val)
+				cur.next = new_node
+				temp1 = temp1.next
+				
+
+			else:
+				sum = temp1.val + temp2.val 
+				new_node = Node(sum)
+				cur.next = new_node
+				sum = 0
+				temp1 = temp1.next
+				temp2 = temp2.next
+				
+			cur = new_node
+					
 
 
 if __name__ == "__main__":
 	sol = Solution()
 	#res = sol.printer(head)
-	res2 = sol.printer_two(head,head2)
+	#res2 = sol.printer_two(head,head2)
+	res3 = sol.addList(head,head2)
 
-	print(res2)
+	print(res3)
