@@ -1,0 +1,6 @@
+gitlab
+ansible
+ci-cd
+react
+angular
+mongo
