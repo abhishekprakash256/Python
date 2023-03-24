@@ -1,9 +1,11 @@
 """
 read the text from the text file 
 """
-lst = []
+text = 'datagy -- is. great!'
+new_text = ''
 
-with open('sample.txt') as f:
-    [lst.append(line.strip()) for line in f.readlines()]
+for character in text:
+    if character.isalnum():
+        new_text += character
 
-print(lst)
+print(new_text)
