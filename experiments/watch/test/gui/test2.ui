@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>230</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionsave"/>
+   </widget>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpaste"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuedit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionnew">
+   <property name="text">
+    <string>new</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="text">
+    <string>copy</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+   <property name="shortcut">
+    <string/>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

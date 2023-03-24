@@ -11,12 +11,16 @@ class operations:
 		running  = nums * running 
 		return running 
 
-	def div(self,nums,running = 0 ):
+	def div(self,nums,running = 1 ):
 		running = running / nums 
 		return running
 
-	def sub(self,nums,running =0):
+	def sub(self,nums,running = 0):
 		running = running - nums
+		return running
+
+	def power(self,nums,running = 1 ):
+		running = running**nums
 		return running
 
 
@@ -66,6 +70,17 @@ def runner():
 				
 			else:
 				res = opr.sub(inp,res)
+
+		if sign == "^":
+
+			if count == 0:
+				res = opr.power(inp)
+				count = 1
+				
+			else:
+				res = opr.power(inp,res)
+
+		
 
 		exit = input("Enter C to exit: ")
 		print(res)

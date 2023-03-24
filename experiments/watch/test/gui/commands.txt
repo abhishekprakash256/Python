@@ -1,0 +1,13 @@
+pyquic5 
+
+qt designer tools 
+
+#to make the ui to code
+pyuic5 -x test.ui -o test.py
+
+objectname is used to refer the item in the UI
+
+the shortcut is used for the opening with the keys 
+
+status tip - just a tip to show what is happening 
+
