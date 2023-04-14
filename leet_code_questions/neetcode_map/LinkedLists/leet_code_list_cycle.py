@@ -44,10 +44,10 @@ class Solution:
 			if temp.next == None:
 				return False
 
-			if temp.val in mapper:
+			if temp in mapper:
 				return True
 			
-			mapper[temp.val] = True
+			mapper[temp] = True
 			temp = temp.next
 
 		return False
@@ -76,8 +76,35 @@ class Solution:
 		return False
 
 
+	def hasCyclepointer(self,head):
+		"""
+		using two pointer 
+		"""
+
+		slow = head
+		fast = head 
+
+		while fast and fast.next:
+
+			slow = slow.next
+			fast = fast.next.next 
+
+
+			if slow == fast:
+				return True
+
+		return False
+
+
+
+
+
+
 sol = Solution()
 res = sol.hasCycle(head)
+res2 = sol.hasCycleset(head)
+res3 = sol.hasCyclepointer(head)
 
 print(res)
-
+print(res2)
+print(res3)
